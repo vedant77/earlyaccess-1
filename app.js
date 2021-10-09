@@ -91,8 +91,7 @@ app.post("/home", urlencodedParser, function (req, res) {
 });
 
 app.get("/test", (req, res) => {
-  User.findOne({ wnumber: wnumberafterin}, async function (err, user) {
-    
+  User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
      if(user){
       res.render("test", {referalID: user._id} );
      }

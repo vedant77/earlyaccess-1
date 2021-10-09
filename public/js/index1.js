@@ -1,8 +1,8 @@
 function shakeform() {
-    formanimate=document.getElementById("regForm");
+    formanimate = document.getElementById("regForm");
     formanimate.scrollIntoView();
-    formanimate.style.animation= "";
-    setTimeout(() => formanimate.style.animation= "shake 0.5s 2",2);
+    formanimate.style.animation = "";
+    setTimeout(() => formanimate.style.animation = "shake 0.5s 2", 2);
 }
 
 
@@ -73,6 +73,11 @@ function nextPrev(n) {
     }
     // Otherwise, display the correct tab:
     showTab(currentTab);
+    var budget = document.getElementById('budget').value;
+    var savings = document.getElementById('savings').value;
+    days = (budget / savings)*30-1;
+    document.getElementById("dayswithus").innerHTML = "You are not gonna believe this, but you'll achieve your goal in " + Math.floor(days) + " days with us!";
+
 }
 
 function validateForm() {
@@ -122,19 +127,19 @@ function fixStepIndicator(n) {
     x[n].className += " active";
 }
 
-    //
+//
 
-    var slider = document.getElementById("budget");
-		var output = document.getElementById("demo");
-		output.innerHTML = slider.value;
+var slider = document.getElementById("budget");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
 
-		slider.oninput = function () {
-			output.innerHTML = this.value;
-		};
-		var slider1 = document.getElementById("savings");
-		var output1 = document.getElementById("demo1");
-		output1.innerHTML = slider1.value;
+slider.oninput = function () {
+    output.innerHTML = this.value;
+};
+var slider1 = document.getElementById("savings");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
 
-		slider1.oninput = function () {
-			output1.innerHTML = this.value;
-		};
+slider1.oninput = function () {
+    output1.innerHTML = this.value;
+};

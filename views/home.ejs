@@ -63,50 +63,56 @@
 							<form id="regForm" action="/home" method="post">
 								<!-- <img class="device-mockup" src="dist/images/iphone-mockup.png" alt="App preview" style="z-index: 0;"alert('you submitted the form');" action="javascript:alert('Submitted')>  -->
 								<!-- One "tab" for each step in the form: -->
-								<div class="tab" style="text-align: left">
-									<h5 style="text-align:center">Tell us you’re saving without telling us you’re saving</h5>
-									<p>
-										Select your goal:<br />
-										<input type="radio" name="goal" value="passive income" checked />
-										<label for="passive income">Going on a trip to Goa</label>
-										<br />
-										<input type="radio" id="dewey" name="goal" value="vacation" />
-										<label for="vacation">Generate up to 10% return</label>
-										<br />
-										<input type="radio" id="louie" name="goal" value="buy something" />
-										<label for="buy something">Buying an iphone</label>
-									</p>
-									<div class="slidecontainer">
+								<div class="tab" style="text-align: left;background-color: rgb(0, 0, 0);">
+									<div style="padding: 40px;">
+										<h5 style="text-align:center">Tell us you’re saving without telling us you’re saving</h5>
 										<p>
-											Budget: <span id="demo"></span><br /><input type="range" min="10000"
-												max="100000" value="10000" class="slider" id="budget" name="budget" />
+											Select your goal:<br />
+											<input type="radio" name="goal" value="passive income" checked />
+											<label for="passive income">Going on a trip to Goa</label>
+											<br />
+											<input type="radio" id="dewey" name="goal" value="vacation" />
+											<label for="vacation">Generate up to 10% return</label>
+											<br />
+											<input type="radio" id="louie" name="goal" value="buy something" />
+											<label for="buy something">Buying an iphone</label>
 										</p>
-										<p>
-											Monthly Savings:
-											<span id="demo1"></span><br /><input type="range" min="1000" max="20000"
-												value="10000" class="slider" id="savings" name="savings" />
-										</p>
+										<div class="slidecontainer">
+											<p>
+												Budget: <span id="demo"></span><br /><input type="range" min="10000"
+													max="100000" value="10000" class="slider" id="budget" name="budget" />
+											</p>
+											<p>
+												Monthly Savings:
+												<span id="demo1"></span><br /><input type="range" min="1000" max="20000"
+													value="10000" class="slider" id="savings" name="savings" />
+											</p>
+										</div>
 									</div>
 								</div>
-								<style>
-
-								</style>
-								<div class="tab tabcontainer">
-									<img src="/images/check1.png" width="100%" style="opacity: 0.3" />
-									<div class="centered">
-										You are not gonna believe this, but you'll achieve your goal in x days with us!
+								
+								<div class="tab tabcontainer"><br/>
+									<img src="/images/check1.png" width="300"  style="opacity: 0.3;display: block;margin: auto;" />
+									<div class="centered" >
+										<p id="dayswithus"></p>
 									</div>
-								</div>
-								<div class="tab">
 									<br/>
-									<p>
-										<input placeholder="Name" id="name" oninput="this.className = ''" name="name" />
-									</p>
-									<p>
-										<input placeholder="Whatsapp Phone Number" type="tel"
-											oninput="this.className = ''" name="wnumber" /><br/>
-									<span style="font-size: medium;">We will send you a personalized portfolio designed for achieving your financial goals.(For free!!)</span>
-									</p>
+								</div>
+								<script>
+									
+								</script>
+								<div class="tab" style="text-align: left;background-color: rgb(0, 0, 0);">
+									<br/>
+									<div style="padding: 20px;">
+										<p>
+											<input placeholder="Name" id="name" oninput="this.className = ''" name="name" />
+										</p>
+										<p>
+											<input placeholder="Whatsapp Phone Number" type="tel"
+												oninput="this.className = ''" name="wnumber" /><br/>
+										<span style="font-size: medium;">We will send you a personalized portfolio designed for achieving your financial goals.(For free!!)</span>
+										</p>
+									</div>
 								</div>
 								<div class="tab">
 									<p>
