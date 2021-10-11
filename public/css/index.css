@@ -1,0 +1,158 @@
+html {
+	scroll-behavior: smooth;
+}
+@media screen and (max-width: 500px) {
+	#regForm {
+		background-color: #05020200;
+		margin-top: -70px;
+		font-family: Raleway;
+		padding: 0px 40px 40px 40px;
+		width: auto !important;
+		min-width: 300px;
+	}
+}
+#regForm {
+	background-color: #05020200;
+    margin-top: -70px;
+	font-family: Raleway;
+	padding: 0px 40px 40px 40px;
+	width: 70%;
+	min-width: 300px;
+}
+
+button{
+	border-radius: 12px ;
+	padding: 6px 10px ;
+	margin-top: 7px ; 
+
+} 
+@media screen and (max-width: 640px) {
+	#regForm {
+		margin-top: 50px;
+	}
+  }
+
+.pulse {
+	
+	animation: pulse 0.5;
+	animation-iteration-count: infinite;
+}
+
+.sharechat {
+    margin-left: 46%;
+    padding: 7px 15px;
+    background: url(/images/WhatsApp.svg.png) no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #FFFFFF;
+    /* border-radius: 0px; */
+    /* border-color: azure; */
+}
+
+#myInput{
+    max-width: 250px;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.96);	}
+
+	25% {
+			transform: scale(0.97);
+		}
+	50% {
+			transform: scale(0.975);
+		}
+	60% {
+		transform: scale(0.985);
+	}
+	75% {
+		transform: scale(0.995);
+	}
+
+	100% {
+		transform: scale(1.02);	}
+}
+
+h1 {
+	text-align: center;
+}
+
+input {
+	padding: 10px;
+
+	font-size: 17px;
+	font-family: Raleway;
+	border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+	background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+	display: none;
+}
+
+button {
+	background-color: #04aa6d;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 17px;
+	font-family: Raleway;
+	cursor: pointer;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+#prevBtn {
+	background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+.step.active {
+	opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+	background-color: #04aa6d;
+}
+
+.tabcontainer {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(255, 255, 255);
+}
