@@ -100,5 +100,7 @@ app.get("/test", (req, res) => {
 });
 });
 
-app.listen(4000, () => console.log("Example app listening on port 4000!"));
+var port  = process.env.PORT || 80;
+app.listen(port, () => console.log("Example app listening on port 4000!"));
+// app.listen(4000, () => console.log("Example app listening on port 4000!"));
 // exports.app = functions.https.onRequest(app);
