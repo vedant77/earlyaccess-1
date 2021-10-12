@@ -2,7 +2,7 @@ function shakeform() {
     formanimate = document.getElementById("regForm");
     formanimate.scrollIntoView();
     formanimate.style.animation = "";
-    setTimeout(() => formanimate.style.animation = "pulse 0.5s 1", 2);
+    setTimeout(() => formanimate.style.animation = "pulse 0.6s 1", 2);
 }
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
