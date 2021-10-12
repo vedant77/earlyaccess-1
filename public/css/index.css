@@ -34,7 +34,7 @@ button{
 
 .pulse {
 	
-	animation: pulse 0.5;
+	animation: pulse 0.6;
 	animation-iteration-count: infinite;
 }
 
