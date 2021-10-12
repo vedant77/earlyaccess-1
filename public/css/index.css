@@ -38,6 +38,13 @@ button{
 	animation-iteration-count: infinite;
 }
 
+.hero-copy{
+	padding-top : 60px !important;
+
+
+
+}
+
 .sharechat {
     margin-left: 46%;
     padding: 7px 15px;
