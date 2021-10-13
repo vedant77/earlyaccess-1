@@ -74,7 +74,18 @@ function nextPrev(n) {
     showTab(currentTab);
     var budget = document.getElementById('budget').value;
     var savings = document.getElementById('savings').value;
-    days = (budget / savings)*4-2 ;
+    weeks = (budget / savings)*4-2 ;
+    months = (budget / savings) - 1 ; 
+    if (months<5) {
+        days = months
+        document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " months!";
+
+      }else {
+        days = weeks
+        document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " weeks!";
+ 
+
+      }
     document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " weeks!";
 
 }
