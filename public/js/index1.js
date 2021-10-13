@@ -75,7 +75,7 @@ function nextPrev(n) {
     var budget = document.getElementById('budget').value;
     var savings = document.getElementById('savings').value;
     days = (budget / savings)*4-2 ;
-    document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in" + Math.floor(days) + "weeks!";
+    document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " weeks!";
 
 }
 
