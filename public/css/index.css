@@ -4,9 +4,9 @@ html {
 @media screen and (max-width: 500px) {
 	#regForm {
 		background-color: #052020;
-		margin-top: 60px;
+		margin-top: 1000px;
 		font-family: Raleway;
-		padding: 0px 40px 40px 20px;
+		padding: 0px 40px 40px 10px;
 		width: auto !important;
 		min-width: 300px;
 	}
