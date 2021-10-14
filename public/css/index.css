@@ -3,7 +3,7 @@ html {
 }
 @media screen and (max-width: 500px) {
 	#regForm {
-		background-color: #05020200;
+		background-color: #728f02;
 		margin-top: -70px;
 		font-family: Raleway;
 		padding: 0px 40px 40px 40px;
@@ -39,7 +39,7 @@ button{
 }
 
 .hero-copy{
-	padding-top : 60px !important;
+	padding-top : 60px !;
 
 
 
@@ -48,7 +48,7 @@ button{
 .sharechat {
     margin-left: 46%;
     padding: 7px 15px;
-    background: url(/images/WhatsApp.svg.png) no-repeat;
+    background: url(/images/trin1.png) no-repeat;
     background-position: center center;
     background-size: 100%;
     width: 50px;
