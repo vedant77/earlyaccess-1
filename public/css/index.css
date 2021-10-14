@@ -3,7 +3,7 @@ html {
 }
 @media screen and (max-width: 500px) {
 	#regForm {
-		background-color: #728f02;
+		background-color: #052020;
 		margin-top: -70px;
 		font-family: Raleway;
 		padding: 0px 40px 40px 40px;
@@ -48,7 +48,7 @@ button{
 .sharechat {
     margin-left: 46%;
     padding: 7px 15px;
-    background: url(/images/trin.png) no-repeat;
+    background: url(/images/WhatsApp.svg.png) no-repeat;
     background-position: center center;
     background-size: 100%;
     width: 50px;
