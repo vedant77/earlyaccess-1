@@ -4,7 +4,7 @@ html {
 @media screen and (max-width: 500px) {
 	#regForm {
 		background-color: #052020;
-		margin-top: -70px;
+		margin-top: 30px;
 		font-family: Raleway;
 		padding: 0px 40px 40px 40px;
 		width: auto !important;
@@ -13,7 +13,7 @@ html {
 }
 #regForm {
 	background-color: #05020200;
-    margin-top: -70px;
+    margin-top: 30px;
 	font-family: Raleway;
 	padding: 0px 40px 40px 40px;
 	width: 70%;
@@ -28,7 +28,8 @@ button{
 } 
 @media screen and (max-width: 640px) {
 	#regForm {
-		margin-top: 50px;
+		margin-top: 60px;
+
 	}
   }
 @media screen and (max-width: 640px) {
