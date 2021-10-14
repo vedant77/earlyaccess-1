@@ -33,8 +33,9 @@ button{
 	}
   }
 @media screen and (max-width: 500px) {
-	#nextBtn {
+	#nextBttn {
 		margin-left: 140px;
+
 	}
   }
 
