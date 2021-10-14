@@ -41,7 +41,7 @@ function showTab(n) {
     if (n == 0) {
         document.getElementById(
             "nextBtn"
-        ).innerHTML = "Sign me up";
+        ).innerHTML = "Show off";
     }
     //... and run a function that will display the correct step indicator:
     fixStepIndicator(n);
