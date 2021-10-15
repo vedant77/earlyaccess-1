@@ -76,17 +76,16 @@ function nextPrev(n) {
     var savings = document.getElementById('savings').value;
     weeks = (budget / savings)*4-2 ;
     months = (budget / savings) - 1 ; 
-    if (months<5) {
-        days = months
+    if (weeks<16) {
+        days = weeks
         document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " months!";
 
       }else {
-        days = weeks
+        days = months
         document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " weeks!";
  
 
       }
-    document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " weeks!";
 
 }
 
