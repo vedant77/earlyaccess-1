@@ -61,6 +61,7 @@ button{
 
 @media screen and (max-width: 500px) {
 	.tab1 {
+		position: relative;
 		height:70%;
 		margin-bottom: 10%;
 
