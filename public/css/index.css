@@ -62,7 +62,9 @@ button{
 @media screen and (max-width: 500px) {
 	.tab1 {
 		padding: 40px;
-		height:70%
+		height:70%;
+		margin-bottom: 10%;
+
 		
 	}
   }
