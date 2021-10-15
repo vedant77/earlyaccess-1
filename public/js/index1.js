@@ -79,8 +79,8 @@ function nextPrev(n) {
 
     if (weeks<16) {
 
-        var days = weeks
-        document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + <strong> str(Math.floor(days))</strong> + " weeks!";
+        vardays = weeks
+        document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " weeks!";
 
       }else {
 
