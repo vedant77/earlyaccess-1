@@ -52,6 +52,21 @@ button{
 
 }
 
+@media screen and (max-width: 500px) {
+	#nextBttn {
+		margin-left: 140px;
+		
+	}
+  }
+
+@media screen and (max-width: 500px) {
+	.tab1 {
+		padding: 40px;
+		height:70%
+		
+	}
+  }
+
 .sharechat {
     margin-left: 44%;
     padding: 7px 15px;
