@@ -7,7 +7,7 @@ html {
 		margin-top: 1000px;
 		font-family: Raleway;
 		padding: 0px 40px 40px 10px;
-		width: auto !important;
+	/*	width: auto !important; */ 
 		min-width: 300px;
 	}
 }
@@ -33,9 +33,9 @@ button{
 	}
   }
 @media screen and (max-width: 500px) {
-	#nextBttn {
+	#nextBtn {
 		margin-left: 140px;
-
+		
 	}
   }
 
