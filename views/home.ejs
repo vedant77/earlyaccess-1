@@ -93,7 +93,7 @@
 								</div>
 								
 								<div class="tab tabcontainer"><br/>
-									<img src="/images/check2.png"   style="opacity: 0.3;display: block;margin: auto;height:150% ; " />
+									<img src="/images/check2.png"   style="opacity: 0.3;display: block;margin: auto;height:150%;" />
 									<div class="centered" >
 										<p id="dayswithus"></p>
 									</div>
@@ -123,7 +123,16 @@
 									</p>
 									</p>
 								</div>
-								
+								<div style="overflow: auto">
+									<div style="float: right">
+										<button type="button" id="prevBtn" onclick="nextPrev(-1)">
+											Previous
+										</button>
+										<button type="button" id="nextBtn"  onclick="nextPrev(1)">
+											Next
+										</button>
+									</div>
+								</div>
 								<!-- Circles which indicates the steps of the form: -->
 								<div style="text-align: center; margin-top: 40px">
 									<span class="step"></span>
