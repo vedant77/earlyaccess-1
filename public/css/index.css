@@ -59,9 +59,9 @@ button{
     background-position: center center;
     background-size: 110%;
     width: 100px;
-    height: 50px;
+    height: 35px;
 	outline: 0;
-	border:1px solid black inherit;
+	border:1px solid white;
 
     /* border-radius: 0px; */
     /* border-color: azure; */
@@ -104,7 +104,7 @@ h1 {
 
 input {
 	padding: 10px;
-
+	margin-top: 2%;
 	font-size: 17px;
 	font-family: Raleway;
 	border: 1px solid #aaaaaa;
