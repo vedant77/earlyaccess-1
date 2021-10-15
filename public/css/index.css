@@ -7,7 +7,7 @@ html {
 		margin-top: 1000px;
 		font-family: Raleway;
 		padding: 0px 40px 40px 10px;
-	/*	width: auto !important; */ 
+		width: 100px ;  
 		min-width: 300px;
 	}
 }
