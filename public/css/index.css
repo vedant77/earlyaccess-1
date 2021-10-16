@@ -72,8 +72,8 @@ button{
   @media screen and (max-width: 650px) {
 	.tab {
 		position: relative;
-		height:580px;
-		margin-bottom: 10%;
+		height:600px;
+		margin-bottom: 5%;
 
 		
 	}
@@ -146,6 +146,7 @@ input.invalid {
 /* Hide all steps by default: */
 .tab {
 	display: none;
+	height: 580px;
 }
 
 
