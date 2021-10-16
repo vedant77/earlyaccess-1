@@ -70,7 +70,6 @@ button{
 	}
   }
 
-  
 .sharechat {
     margin-left: 44%;
     padding: 7px 15px;
@@ -135,7 +134,9 @@ input.invalid {
 }
 
 /* Hide all steps by default: */
-
+.tab {
+	display: none;
+}
 
 button {
 	background-color: #04aa6d;
