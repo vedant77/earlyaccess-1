@@ -143,6 +143,12 @@ input.invalid {
 }
 
 /* Hide all steps by default: */
+@media screen and (max-width: 500px) {
+	.tab {
+		display: none;
+	}
+  }
+
 .tab {
 	display: none;
 	margin-left: 180px;
@@ -186,7 +192,14 @@ button:hover {
 .step.finish {
 	background-color: #04aa6d;
 }
-
+@media screen and (max-width: 500px) {
+	.tabcontainer {
+		position: relative;
+		text-align: center;
+		color: white;
+		height: 550px;
+	}
+  }
 .tabcontainer {
 	position: relative;
 	text-align: center;
