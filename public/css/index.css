@@ -145,6 +145,7 @@ input.invalid {
 /* Hide all steps by default: */
 .tab {
 	display: none;
+	margin-left: 180px;
 }
 
 button {
@@ -190,7 +191,8 @@ button:hover {
 	position: relative;
 	text-align: center;
 	color: white;
-	height: 550px 
+	height: 550px;
+	margin-left: 180px; 
 }
 
 .centered {
