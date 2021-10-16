@@ -69,7 +69,17 @@ button{
 		
 	}
   }
+  @media screen and (max-width: 500px) {
+	.tab {
+		position: relative;
+		height:580px;
+		margin-bottom: 10%;
 
+		
+	}
+  }
+
+  
 .sharechat {
     margin-left: 44%;
     padding: 7px 15px;
@@ -137,6 +147,7 @@ input.invalid {
 .tab {
 	display: none;
 }
+
 
 button {
 	background-color: #04aa6d;
