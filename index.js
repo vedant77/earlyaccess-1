@@ -153,7 +153,7 @@ app.post("/home", urlencodedParser, function (req, res){
               referredcount:1
             }
           });
-          res.redirect("refer");
+          res.redirect("test");
           
         } else {
           console.log("error");
@@ -165,10 +165,10 @@ app.post("/home", urlencodedParser, function (req, res){
  
 });
 
-app.get("/refer", (req, res) => {
+app.get("/test", (req, res) => {
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
      if(user){
-      res.render("refer", {referalID: user._id} );
+      res.render("test", {referalID: user._id} );
      }
   
 });
