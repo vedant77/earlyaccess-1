@@ -102,7 +102,6 @@ app.get("/home", (req, res) => {
   res.render("home", {foo: "FOO"});
 });
 
-
 mongoose.connect(
 
     "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority",
@@ -154,6 +153,7 @@ app.post("/home", urlencodedParser, function (req, res){
             }
           });
           res.redirect("test");
+          
           
         } else {
           console.log("error");
