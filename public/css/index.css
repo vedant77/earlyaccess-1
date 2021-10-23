@@ -186,7 +186,25 @@ button:hover {
 .step.active {
 	opacity: 1;
 }
-
+@media screen and (max-width: 500px) {
+	.leaderboard{
+		position: relative;
+		text-align: center;
+		height: 300px;
+		color: white;
+		margin-left: 2px;
+		display:block;
+	}
+  }
+.leaderboard{
+	position: relative;
+	text-align: center;
+	width: 400px
+	height:400px ;
+	color: white;
+	margin-left: 2px;
+	display:block;
+}
 /* Mark the steps that are finished and valid: */
 .step.finish {
 	background-color: #04aa6d;
