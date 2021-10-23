@@ -199,9 +199,8 @@ button:hover {
 .leaderboard{
 	position: relative;
 	text-align: center;
-	width: 400px
-	height:400px ;
-	color: white;
+	width: 200px;
+	height:200px ;
 	margin-left: 2px;
 	display:block;
 }
