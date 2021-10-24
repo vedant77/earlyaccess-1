@@ -198,8 +198,9 @@ button:hover {
   }
   
 #leaderboard {
-	width: 200px;
+	width: 600px;
 	height: auto;
+	margin-left: 36px;
   }
   
   .row {
