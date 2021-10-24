@@ -140,8 +140,25 @@ app.post("/home", urlencodedParser, function (req, res){
     referredcount: 0,
   });
 
-  User.findOne({ wnumber: req.body.wnumber }, async function (err) {
-    
+  User.findOne({ wnumber: req.body.wnumber }, async function (err, user) {
+    if (user) {if (!err) {
+      console.log("no error");
+      wnumberafterin=req.body.wnumber;
+      console.log(referallink);
+     await User.findOneAndUpdate({ _id: referallink}, {
+        $inc:{
+          referredcount:1
+        }
+      });
+      res.redirect("test");
+      
+      
+    } else {
+      console.log("error");
+      res.redirect("home");
+    }
+  } 
+    else {
       newUser.save(async function (err) {
         if (!err) {
           console.log("no error");
@@ -160,7 +177,7 @@ app.post("/home", urlencodedParser, function (req, res){
           res.redirect("home");
         }
       });
-    
+    }
   });
  
 });
