@@ -172,7 +172,7 @@ app.post("/home", urlencodedParser, function (req, res){
   });
 
   User.findOne({ wnumber: req.body.wnumber }, async function (err, user) {
-    if (user) {res.write("<h1> User already registerd with this number </h1>");} else {
+     
       newUser.save(async function (err) {
         if (!err) {
           console.log("no error");
