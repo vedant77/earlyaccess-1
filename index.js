@@ -140,9 +140,8 @@ app.post("/home", urlencodedParser, function (req, res){
     referredcount: 0,
   });
 
-  User.findOne({ wnumber: req.body.wnumber }, async function (err, user) {
-    if (user) {res.write("<h1> User already registerd with this number </h1>");} 
-    else {
+  User.findOne({ wnumber: req.body.wnumber }, async function (err) {
+    
       newUser.save(async function (err) {
         if (!err) {
           console.log("no error");
@@ -161,7 +160,7 @@ app.post("/home", urlencodedParser, function (req, res){
           res.redirect("home");
         }
       });
-    }
+    
   });
  
 });
