@@ -141,24 +141,12 @@ app.post("/home", urlencodedParser, function (req, res){
   });
 
   User.findOne({ wnumber: req.body.wnumber }, async function (err, user) {
-    if (user) {if (!err) {
-      console.log("no error");
-      wnumberafterin=req.body.wnumber;
-      console.log(referallink);
-     await User.findOneAndUpdate({ _id: referallink}, {
-        $inc:{
-          referredcount:1
-        }
-      });
+  
+    if (user) {
       res.redirect("test");
       
       
-    } else {
-      console.log("error");
-      res.redirect("home");
-    }
-  } 
-    else {
+    }else {
       newUser.save(async function (err) {
         if (!err) {
           console.log("no error");
