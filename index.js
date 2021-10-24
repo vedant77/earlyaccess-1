@@ -189,7 +189,7 @@ app.post("/home", urlencodedParser, function (req, res){
           
         } else {
           console.log("error");
-          res.redirect("home");
+          //res.redirect("home");
         }
       });
     }
