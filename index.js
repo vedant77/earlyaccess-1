@@ -172,7 +172,8 @@ app.post("/home", urlencodedParser, function (req, res){
   });
 
   User.findOne({ wnumber: req.body.wnumber }, async function (err, user) {
-     
+    if (user) {res.redirect("test");} 
+    else {
       newUser.save(async function (err) {
         if (!err) {
           console.log("no error");
@@ -191,8 +192,10 @@ app.post("/home", urlencodedParser, function (req, res){
           res.redirect("home");
         }
       });
-    });
+    }
+  });
  
+});
 
 app.get("/test", (req, res) => {
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
