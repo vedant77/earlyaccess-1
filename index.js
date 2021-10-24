@@ -191,10 +191,8 @@ app.post("/home", urlencodedParser, function (req, res){
           res.redirect("home");
         }
       });
-    }
-  });
+    });
  
-});
 
 app.get("/test", (req, res) => {
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
