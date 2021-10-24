@@ -187,7 +187,7 @@ button:hover {
 	opacity: 1;
 }
 @media screen and (max-width: 500px) {
-	.leaderboard{
+	.leaderboardxx{
 		position: relative;
 		text-align: center;
 		height: 300px;
@@ -196,7 +196,46 @@ button:hover {
 		display:block;
 	}
   }
-.leaderboard{
+  
+#leaderboard {
+	width: 600px;
+	height: auto;
+  }
+  
+  .row {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #AFAFAF;
+  }
+  
+  .name {
+	position: relative;
+	display: inline-block;
+	width: 75%;
+	line-height: 45px;
+  }
+  
+  .score {
+	position: relative;
+	display: inline-block;
+	width: 25%;
+  }
+  
+  .row:nth-child(1) {
+	background: gold;
+  }
+  
+  .row:nth-child(2) {
+	background: #c0c0c0;
+  }
+  
+  .row:nth-child(3) {
+	background: #cd7f32;
+  }
+
+.leaderboardxx{
 	position: relative;
 	text-align: center;
 	width: 50px;
