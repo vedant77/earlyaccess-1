@@ -165,11 +165,12 @@ app.post("/home", urlencodedParser, function (req, res){
           console.log("error");
           res.redirect("home");
         }
-      });
+        });
     }
   });
  
 });
+
 
 var MongoClient = require('mongodb').MongoClient;
 var dburl = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority";
@@ -186,7 +187,7 @@ var dburl = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_
 });
 
 var port  = process.env.PORT || 80;
-server.listen(port, () => console.log("Example app listening on port 4000!"));
-// app.listen(port, () => console.log("Example app listening on port 4000!"));
+server.listen(443, () => console.log("Example app listening on port 4000!"));
+app.listen(port, () => console.log("Example app listening on port 4000!"));
 // app.listen(4000, () => console.log("Example app listening on port 4000!"));
 // exports.app = functions.https.onRequest(app);
