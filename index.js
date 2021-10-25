@@ -184,7 +184,6 @@ var dburl = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_
   
 
 });
-});
 
 var port  = process.env.PORT || 80;
 server.listen(port, () => console.log("Example app listening on port 4000!"));
