@@ -177,11 +177,11 @@ var url = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db
 MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("event_db1");
-  console.log(dbo)
+  console.log(dbo); 
   dbo.collection("users").find({}).toArray(function(err, result) {
-  console.log(result)  
+  console.log(result) ; 
   if (err) throw err;
-    console.log(result);
+  console.log(result);
   });
 });
 
