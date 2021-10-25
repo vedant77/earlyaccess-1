@@ -179,7 +179,7 @@ MongoClient.connect(url, function(err, db) {
       var dbo = db.db("event_db1");
       dbo.collection("users").find({}).toArray(function(err, result) {
     if (err) throw err;
-    console.log(result);
+    document.write (x);
       });
   });
 
