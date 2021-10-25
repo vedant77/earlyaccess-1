@@ -170,6 +170,19 @@ app.post("/home", urlencodedParser, function (req, res){
   });
  
 });
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("mydb");
+      dbo.collection("customers").find({}).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    db.close();
+      });
+  });
+});
 
 app.get("/test", (req, res) => {
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
