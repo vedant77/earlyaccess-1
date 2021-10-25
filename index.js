@@ -172,25 +172,29 @@ app.post("/home", urlencodedParser, function (req, res){
 });
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority";
+var dburl = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority";
 
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("event_db1");
-  console.log(dbo); 
-  dbo.collection("users").find({}).toArray(function(err, result) {
-  console.log(result) ; 
-  if (err) throw err;
-  console.log(result);
-  });
-});
+
 
 app.get("/test", (req, res) => {
+  MongoClient.connect(dburl, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("event_db1");
+    console.log(dbo); 
+    dbo.collection("users").find({}).toArray(function(err, result) {
+    console.log(result) ; 
+    res.render("test", {referalID: user._id, referalcount: user.referredcount,  } );
+  
+    if (err) throw err;
+    console.log(result);
+    });
+  });
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
      if(user){
-      res.render("test", {referalID: user._id} );
+      res.render("test", {referalID: user._id, referalcount: result,  } );
      }
   
+
 });
 });
 
