@@ -176,22 +176,10 @@ var dburl = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_
 
 
 
-app.get("/test", (req, res) => {
-  MongoClient.connect(dburl, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db("event_db1");
-    console.log(dbo); 
-    dbo.collection("users").find({}).toArray(function(err, result) {
-    console.log(result) ; 
-    res.render("test", {referalID: user._id, referalcount: user.referredcount,  } );
-  
-    if (err) throw err;
-    console.log(result);
-    });
-  });
+
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
      if(user){
-      res.render("test", {referalID: user._id, referalcount: result,  } );
+      res.render("test", {referalID: user._id} );
      }
   
 
