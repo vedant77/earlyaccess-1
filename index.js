@@ -170,19 +170,18 @@ app.post("/home", urlencodedParser, function (req, res){
   });
  
 });
+
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var url = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority";
 
 MongoClient.connect(url, function(err, db) {
       if (err) throw err;
-      var dbo = db.db("mydb");
-      dbo.collection("customers").find({}).toArray(function(err, result) {
+      var dbo = db.db("event_db1");
+      dbo.collection("users").find({}).toArray(function(err, result) {
     if (err) throw err;
     console.log(result);
-    db.close();
       });
   });
-});
 
 app.get("/test", (req, res) => {
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
