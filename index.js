@@ -105,6 +105,7 @@ app.get("/home", (req, res) => {
 mongoose.connect(
 
     "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority",
+
     {
       dbName: "event_db1",
       useNewUrlParser: true,
@@ -176,15 +177,13 @@ var MongoClient = require('mongodb').MongoClient;
 var dburl = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority";
 
 
-
+app.get("/test", (req, res) => {
 
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
      if(user){
       res.render("test", {referalID: user._id} );
-     }
-  
-
-})
+     }})
+}
 
 var port  = process.env.PORT || 80;
 server.listen(443, () => console.log("Example app listening on port 4000!"));
