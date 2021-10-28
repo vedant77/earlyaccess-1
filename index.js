@@ -176,8 +176,19 @@ app.post("/home", urlencodedParser, function (req, res){
 var MongoClient = require('mongodb').MongoClient;
 var dburl = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority";
 
+MongoClient.connect(dburl, function(err, db) {
+if (err) throw err;
+var dbo = db.db("event_db1");
+dbo.collection("users").find({}).toArray(function(err, result) {
+if (err) throw err;
+   console.log(result);
+  console.log(result[0]['referredcount']);
+  result.forEach((e) => {
+    console.log(`${e.name} ${e.referredcount}`);
+});
+});
 
- app.get("/test", (req, res) => {
+app.get("/test", (req, res) => {
 
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
      if(user){

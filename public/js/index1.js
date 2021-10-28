@@ -10,7 +10,7 @@ showTab(currentTab); // Display the current tab
 
 function showTab(n) {
     // This function will display the specified tab of the form...
-    var x =
+    var x = 
         document.getElementsByClassName("tab");
     x[n].style.display = "block";
     //... and fix the Previous/Next buttons:
@@ -79,7 +79,7 @@ function nextPrev(n) {
 
     if (weeks<16) {
 
-        vardays = weeks
+        var days = weeks
         document.getElementById("dayswithus").innerHTML = "We'll help you achieve your goal in " + Math.floor(days) + " weeks!";
 
       }else {
