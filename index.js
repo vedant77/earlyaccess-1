@@ -176,29 +176,57 @@ app.post("/home", urlencodedParser, function (req, res){
 var MongoClient = require('mongodb').MongoClient;
 var dburl = "mongodb+srv://fintusers:Vedant123@cluster0.cfxbz.mongodb.net/event_db1?retryWrites=true&w=majority";
 
-MongoClient.connect(dburl, function(err, db) {
-if (err) throw err;
-var dbo = db.db("event_db1");
-dbo.collection("users").find({}).toArray(function(err, result) {
-if (err) throw err;
-   console.log(result);
-  console.log(result[0]['referredcount']);
-  result.forEach((e) => {
-    console.log(`${e.name} ${e.referredcount}`);
-});
-});
+function dynamicSort(property) {
+  var sortOrder = 1;
+  if(property[0] === "-") {
+      sortOrder = -1;
+      property = property.substr(1);
+  }
+  return function (a,b) {
+      /* next line works with strings and numbers, 
+       * and you may want to customize it to your needs
+       */
+      var result = (a[property] > b[property]) ? -1 : (a[property] < b[property]) ? 1 : 0;
+      return result * sortOrder;
+  }
+}
+
+const fs = require('fs');
+const writeStream = fs.createWriteStream('file1.txt');
+const pathName = writeStream.path;
+
+
+var k;
+var l;
 
 app.get("/test", (req, res) => {
 
+  MongoClient.connect(dburl, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("event_db1");
+    dbo.collection("users").find({}).toArray(function(err, result) {
+    if (err) throw err;
+     // console.log(result);
+     // result.forEach(value => writeStream.write(`${JSON.stringify(value)}\n`));
+    
+     // console.log(result[0]['referredcount']);
+    result.sort(dynamicSort("referredcount"));
+    
+    k = result.slice(0,5);
+    l = result.length;
+    
+      });
+    });
+
   User.findOne({ wnumber: wnumberafterin}, async function (err, user) {  
      if(user){
-      res.render("test", {referalID: user._id} );
+      res.render("test", {referalID: user._id, top: k, leng: l });
      }})
 })
 
 var port  = process.env.PORT || 80;
 server.listen(443, () => console.log("Example app listening on port 4000!"));
-app.listen(port, () => console.log("Example app listening on port 4000!"));
+//app.listen(4000, () => console.log("Example app listening on port 4000!"));
 // app.listen(4000, () => console.log("Example app listening on port 4000!"));
 // exports.app = functions.https.onRequest(app);
 
