@@ -226,7 +226,7 @@ app.get("/test", (req, res) => {
 
 
 var port  = process.env.PORT || 80;
-server.listen(443, () => console.log("Example app listening on port 4000!"));
+server.listen(port, () => console.log("Example app listening on port 4000!"));
 app.listen(80, () => console.log("Example app listening on port 4000!"));
 // app.listen(4000, () => console.log("Example app listening on port 4000!"));
 // exports.app = functions.https.onRequest(app);
